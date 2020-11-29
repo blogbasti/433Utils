@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
      // This pin is not the first pin on the RPi GPIO header!
      // Consult https://projects.drogon.net/raspberry-pi/wiringpi/pins/
      // for more information.
-     int PIN = 2;
+     int PIN = 0;
      
      if(wiringPiSetup() == -1) {
        printf("wiringPiSetup failed, exiting...");
@@ -48,7 +48,11 @@ int main(int argc, char *argv[]) {
           printf("Unknown encoding\n");
         } else {    
    
-          printf("Received %i\n", mySwitch.getReceivedValue() );
+          printf("Received value: %i, ", mySwitch.getReceivedValue() );
+	  printf("delay %i, ", mySwitch.getReceivedDelay() );
+	  printf("bitlength %i, ", mySwitch.getReceivedBitlength() );
+	  printf("protocol %i, ", mySwitch.getReceivedProtocol() );
+	  printf("rawdata %i\n", mySwitch.getReceivedRawdata() );
         }
     
         fflush(stdout);

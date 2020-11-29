@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
      see https://projects.drogon.net/raspberry-pi/wiringpi/pins/
      for pin mapping of the raspberry pi GPIO connector
      */
-    int PIN = 0;
+    int PIN = 2;
     const char* code[6] = { "00000", "10000", "01000", "00100", "00010", "00001" };
 
     if (argc < 4) {
